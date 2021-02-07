@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  get 'welcomes/index'
   resources :comments
   resources :friendlinks
   resources :users
@@ -12,6 +13,7 @@ Rails.application.routes.draw do
     resources :comments
     resources :friendlinks
   end
+
 
   root to: "blogs#index"
 

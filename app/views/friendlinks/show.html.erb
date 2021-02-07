@@ -7,7 +7,7 @@
 
 <p>
   <strong>Picture:</strong>
-  <%= @friendlink.picture %>
+  <%= image_tag(@friendlink.picture_url, :width => 300) if @friendlink.picture.present? %>
 </p>
 
 <p>
