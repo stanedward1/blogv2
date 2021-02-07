@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_05_013808) do
+ActiveRecord::Schema.define(version: 2021_02_07_090316) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,9 +25,11 @@ ActiveRecord::Schema.define(version: 2021_02_05_013808) do
 
   create_table "comments", force: :cascade do |t|
     t.string "commenter"
-    t.string "body"
+    t.text "body"
+    t.bigint "blog_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["blog_id"], name: "index_comments_on_blog_id"
   end
 
   create_table "friendlinks", force: :cascade do |t|
@@ -48,4 +50,5 @@ ActiveRecord::Schema.define(version: 2021_02_05_013808) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  add_foreign_key "comments", "blogs"
 end

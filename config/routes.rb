@@ -1,16 +1,18 @@
 Rails.application.routes.draw do
 
   get 'welcomes/index'
-  resources :comments
   resources :friendlinks
   resources :users
-  resources :blogs
+  resources :blogs do
+    resources :comments
+  end
 
   namespace :admin do
     root to: "blogs#index",as: "root"
     resources :users
-    resources :blogs
-    resources :comments
+    resources :blogs do
+      resources :comments
+    end
     resources :friendlinks
   end
 
