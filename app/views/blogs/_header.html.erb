@@ -34,14 +34,9 @@
     </div>
     <div class="nav-scroller py-1 mb-2">
       <a class="nav d-flex justify-content-between">
-      <a class="p-2 text-muted" href="#">首页</a>
-      <a class="p-2 text-muted" href="#"></a>
-      <a class="p-2 text-muted" href="http://localhost:3000/articles/new">写博客</a>
-      <a class="p-2 text-muted" href="#">算法</a>
-      <a class="p-2 text-muted" href="#">环境</a>
-      <a class="p-2 text-muted" href="#">框架和第三方库</a>
+      <%=link_to '首页',blogs_path %>
       <a class="p-2 text-muted" href="#">工具</a>
-      <a class="p-2 text-muted" href="#">友链</a>
+      <%=link_to '友链',friendlinks_path %>
       </a>
     </div>
   </header>
