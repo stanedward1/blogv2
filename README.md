@@ -1,24 +1,5 @@
-# README
+## 20210209
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+#### 基本的markdown语法和代码高亮已完成，再把评论的crud弄一下，还有进后台管理的验证
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+![alt 代码高亮](img/好看那么一点点的代码高亮.png)
