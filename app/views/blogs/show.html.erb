@@ -9,7 +9,8 @@
 
 <p>
   <strong>Content:</strong>
-  <%= @blog.content %>
+  <%#= @blog.content %>
+  <%= markdown(@blog.content) %>
 </p>
 
 <p>

@@ -17,7 +17,7 @@
     <% @blogs.each do |blog| %>
 <!--      <tr>-->
         <h2><%= blog.title %></h2>
-        <p><%= blog.content %></p>
+        <p><%= markdown(blog.content) %></p>
 <!--        <td><%#= blog.picture %></td>-->
         <p><%= link_to '显示详情', blog %></p>
 <!--        <td><%#= link_to 'Edit', edit_blog_path(blog) %></td>-->

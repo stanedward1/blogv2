@@ -11,14 +11,14 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
+  <div class="mb-6">
+    <%= form.label :title,class: "label" %>
+    <%= form.text_field :title,class: "input"%>
   </div>
 
-  <div class="field">
-    <%= form.label :content %>
-    <%= form.text_area :content %>
+  <div class="mb-6">
+    <%= form.label :content,class: "label"%>
+    <%= form.text_area :content ,class: "input h-64"%>
   </div>
 
   <div class="field">
