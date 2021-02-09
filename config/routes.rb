@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :tools
   get 'welcomes/index'
   resources :friendlinks
   resources :users

@@ -1,42 +1,42 @@
-<%= render "blogs/header" %>
+<%= render "header" %>
 
 <p id="notice"><%= notice %></p>
 
-<h1>Blogs</h1>
+<!--<h1>Blogs</h1>-->
 
 <table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Content</th>
-      <th>Picture</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<!--  <thead>-->
+<!--    <tr>-->
+<!--      <th>Title</th>-->
+<!--      <th>Content</th>-->
+<!--      <th>Picture</th>-->
+<!--      <th colspan="3"></th>-->
+<!--    </tr>-->
+<!--  </thead>-->
 
   <tbody>
     <% @blogs.each do |blog| %>
-      <tr>
-        <td><%= blog.title %></td>
-        <td><%= blog.content %></td>
-        <td><%= blog.picture %></td>
-        <td><%= link_to 'Show', blog %></td>
+<!--      <tr>-->
+        <h2><%= blog.title %></h2>
+        <p><%= blog.content %></p>
+<!--        <td><%#= blog.picture %></td>-->
+        <td><%= link_to 'Show',admin_blog_path(blog) %></td>
         <td><%= link_to 'Edit', edit_blog_path(blog) %></td>
         <td><%= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+<!--      </tr>-->
     <% end %>
   </tbody>
 </table>
 
-<br>
+<!--<br>-->
 
-<%= link_to 'New Blog', new_blog_path %>
-<br>
-<%= link_to 'blogs',admin_blogs_url %>
+<%#= link_to 'New Blog', new_blog_path %>
+<!--<br>-->
+<%#= link_to 'blogs',admin_blogs_url %>
 <!--<br>-->
 <%#= link_to 'comments',admin_comments_url %>
-<br>
-<%= link_to 'friendlinks',admin_friendlinks_url %>
-<br>
-<%= link_to 'users',admin_users_url %>
+<!--<br>-->
+<%#= link_to 'friendlinks',admin_friendlinks_url %>
+<!--<br>-->
+<%#= link_to 'users',admin_users_url %>
 

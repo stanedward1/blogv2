@@ -2,27 +2,27 @@
 
 <p id="notice"><%= notice %></p>
 
-<h1>Blogs</h1>
+<!--<h1>Blogs</h1>-->
 
 <table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Content</th>
-      <th colspan="2"></th>
-    </tr>
-  </thead>
+<!--  <thead>-->
+<!--    <tr>-->
+<!--      <th>Title</th>-->
+<!--      <th>Content</th>-->
+<!--      <th colspan="2"></th>-->
+<!--    </tr>-->
+<!--  </thead>-->
 
   <tbody>
     <% @blogs.each do |blog| %>
-      <tr>
-        <td><%= blog.title %></td>
-        <td><%= blog.content %></td>
+<!--      <tr>-->
+        <h2><%= blog.title %></h2>
+        <p><%= blog.content %></p>
 <!--        <td><%#= blog.picture %></td>-->
-        <td><%= link_to '显示详情', blog %></td>
+        <p><%= link_to '显示详情', blog %></p>
 <!--        <td><%#= link_to 'Edit', edit_blog_path(blog) %></td>-->
 <!--        <td><%#= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' } %></td>-->
-      </tr>
+<!--      </tr>-->
     <% end %>
   </tbody>
 </table>
@@ -35,4 +35,4 @@
 <!--<br>-->
 <%#= link_to'users',users_url %>
 
-<h2><%=link_to 'go to admin',admin_root_url %></h2>
+<!--<h2><%#=link_to 'go to admin',admin_root_url %></h2>-->
