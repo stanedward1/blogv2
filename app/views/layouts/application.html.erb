@@ -2,25 +2,16 @@
 <html>
   <head>
     <title></title>
-    <%=stylesheet_link_tag 'application',media: 'all' %>>
+    <%=stylesheet_link_tag 'application',media: 'all',"data-turbolinks-track"=>true %>
+    <%#=javascript_include_tag 'application',"data-turbolinks-track"=>true %>
     <%=csrf_meta_tags %>
   </head>
 
   <body>
-  <header class="nav navvar-fixed-top navbar-inverse">
-    <div class="container">
-      <%=link_to "longbiu blog",'#',id:"logo" %>
-      <nav>
-        <ul class="nav navbar-nav navbar-right">
-          <li><%= link_to "Home", blogs_path %></li>
-          <li><%= link_to '友链管理',friendlinks_url %></li>
-          <li><%= link_to 'Log in',users_path %></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+  <%= render 'layouts/header' %>
   <div class="container">
     <%= yield %>
+    <%=render 'layouts/footer' %>
   </div>
   </body>
 </html>

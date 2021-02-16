@@ -1,4 +1,4 @@
-<%= render "header" %>
+<%#= render "header" %>
 
 <p id="notice"><%= notice %></p>
 
@@ -20,9 +20,9 @@
         <h2><%= blog.title %></h2>
         <p><%= blog.content %></p>
 <!--        <td><%#= blog.picture %></td>-->
-        <td><%= link_to 'Show',admin_blog_path(blog) %></td>
-        <td><%= link_to 'Edit', edit_blog_path(blog) %></td>
-        <td><%= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <b><%= link_to 'Show',admin_blog_path(blog) %>  </b>
+        <b><%= link_to 'Edit', edit_blog_path(blog) %>  </b>
+        <b><%= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' } %></b>
 <!--      </tr>-->
     <% end %>
   </tbody>

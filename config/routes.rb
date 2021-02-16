@@ -1,9 +1,13 @@
 Rails.application.routes.draw do
 
+  get 'static_page/home'
   resources :tools
   get 'welcomes/index'
+  get 'static_pages/help'
+  get 'static_pages/home'
   resources :friendlinks
   resources :users
+  get 'signup' => 'users#new'
   resources :blogs do
     resources :comments
   end
