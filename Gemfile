@@ -6,6 +6,7 @@ ruby '2.7.2'
 gem 'redcarpet'
 gem 'coderay', '~> 1.1', '>= 1.1.1'
 gem 'carrierwave'
+gem 'bootstrap-sass'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.1.1'
 # Use sqlite3 as the database for Active Record
