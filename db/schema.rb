@@ -49,6 +49,7 @@ ActiveRecord::Schema.define(version: 2021_02_09_022143) do
     t.string "email"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "password_digest"
   end
 
   add_foreign_key "comments", "blogs"
