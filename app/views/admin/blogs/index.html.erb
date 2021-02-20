@@ -1,7 +1,5 @@
 <%#= render "header" %>
 
-<p id="notice"><%= notice %></p>
-
 <!--<h1>Blogs</h1>-->
 
 <table>
@@ -18,8 +16,8 @@
     <% @blogs.each do |blog| %>
 <!--      <tr>-->
         <h2><%= blog.title %></h2>
-        <p><%= blog.content %></p>
-<!--        <td><%#= blog.picture %></td>-->
+        <p><%= markdown(blog.content) %></p>
+        <!--        <td><%#= blog.picture %></td>-->
         <b><%= link_to 'Show',admin_blog_path(blog) %>  </b>
         <b><%= link_to 'Edit', edit_blog_path(blog) %>  </b>
         <b><%= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' } %></b>

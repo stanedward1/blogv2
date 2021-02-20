@@ -3,8 +3,8 @@
 
 /* universal */
 
-bogy{
-  padding-top: 60px;
+body{
+  padding-top: 0px;
 }
 
 section{
@@ -21,6 +21,67 @@ textarea{
 
 .center h1{
   margin-bottom: 10px;
+}
+
+
+.navbar>.container .logo {
+  line-height: 60px;
+}
+
+.navbar>.container .logo a {
+  color: #009a61;
+}
+
+.navbar-default {
+  background-color: #fff;
+}
+
+.navbar-nav>li>a {
+  line-height: 60px;
+  font-size: 16px;
+  padding-top: 0;
+  padding-bottom: 0px;
+}
+
+
+/* 内容部分开始 */
+
+.content-wrap {
+  width: 100%;
+  float: left;
+  min-height: 1000px;
+}
+
+.content {
+  position: relative;
+  min-height: 500px;
+  margin-right: 320px;
+  margin-bottom: 20px;
+  float: left;
+}
+
+@media (max-width:1000px) {
+  .content {
+    margin-right: 0;
+  }
+  .sidebar {
+    display: none;
+  }
+}
+
+.sidebar {
+  float: left;
+  margin-left: -300px;
+  width: 300px;
+  position: relative;
+}
+
+.widget {
+  clear: both;
+  position: relative;
+  margin-bottom: 15px;
+  border-radius: 4px;
+  overflow: hidden;
 }
 
 /* typography */

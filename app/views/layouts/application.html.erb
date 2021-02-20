@@ -8,9 +8,38 @@
   </head>
 
   <body>
+  <div class="introBanner">
   <%= render 'layouts/header' %>
+  <% if current_user %>
+    <!-- current_user will return true if a user is logged in -->
+    <%= "Logged in as #{current_user.email}" %> | <%= link_to 'Log Out', logout_path, method: :delete %> | <%=link_to 'new blog',new_admin_blog_path %>
+  <% else %>
+    <!-- not logged in -->
+<!--    <%#= link_to 'Log In', login_path %> or <%#= link_to 'Sign Up', new_user_path %>-->
+  <% end %>
+  <hr>
+
+  <% if notice %>
+    <%= notice %>
+  <% end %>
+
+  <% if alert %>
+    <%= alert %>
+  <% end %>
+  </div>
+  <div class="content-wrap">
+    <div class="content">
+      <%= yield %>
+    </div>
+  </div>
+
+  <div class="sidebar">
+    <div class="widget widget_hot">
+      <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=450 src="//music.163.com/outchain/player?type=0&id=5376368685&auto=1&height=430"></iframe>
+    </div>
+  </div>
+
   <div class="container">
-    <%= yield %>
     <%=render 'layouts/footer' %>
   </div>
   </body>

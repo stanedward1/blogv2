@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  get 'pages/secret'
   get 'static_page/home'
   resources :tools
   get 'welcomes/index'
@@ -8,6 +9,10 @@ Rails.application.routes.draw do
   resources :friendlinks
   resources :users
   get 'signup' => 'users#new'
+  post 'users' => 'users#create'
+  get '/login'     => 'sessions#new'
+  post '/login'    => 'sessions#create'
+  get '/logout' => 'sessions#destroy'
   resources :blogs do
     resources :comments
   end
