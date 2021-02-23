@@ -15,12 +15,13 @@
   <tbody>
     <% @blogs.each do |blog| %>
 <!--      <tr>-->
-        <h2><%= blog.title %></h2>
+        <b><%= blog.title %></b>
         <p><%= markdown(blog.content) %></p>
         <!--        <td><%#= blog.picture %></td>-->
-        <b><%= link_to 'Show',admin_blog_path(blog) %>  </b>
-        <b><%= link_to 'Edit', edit_blog_path(blog) %>  </b>
+        <b><%= link_to 'Show  |',admin_blog_path(blog) %>  </b>
+        <b><%= link_to 'Edit  |', edit_blog_path(blog) %>  </b>
         <b><%= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' } %></b>
+        <hr>
 <!--      </tr>-->
     <% end %>
   </tbody>

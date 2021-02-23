@@ -7,6 +7,8 @@ gem 'redcarpet'
 gem 'coderay', '~> 1.1', '>= 1.1.1'
 gem 'carrierwave'
 gem 'bootstrap-sass'
+gem 'kaminari'
+gem 'bootstrap-kaminari-views'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.1.1'
 # Use sqlite3 as the database for Active Record

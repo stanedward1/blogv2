@@ -14,17 +14,18 @@
   <tbody>
     <% @blogs.each do |blog| %>
 <!--      <tr>-->
-        <h2><%= blog.title %></h2>
+        <b><%= blog.title %></b>
         <p><%= markdown(blog.content) %></p>
 <!--        <td><%#= blog.picture %></td>-->
         <p><%= link_to '显示详情', blog %></p>
+        <hr>
 <!--        <td><%#= link_to 'Edit', edit_blog_path(blog) %></td>-->
 <!--        <td><%#= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' } %></td>-->
 <!--      </tr>-->
     <% end %>
   </tbody>
 </table>
-
+<p><%= paginate @blogs %></p>
 <%#= link_to 'New Blog', new_blog_path %>
 <!--<br>-->
 <%#= link_to'comments',comments_url %>

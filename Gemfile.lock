@@ -68,6 +68,9 @@ GEM
     bindex (0.8.1)
     bootsnap (1.7.0)
       msgpack (~> 1.0)
+    bootstrap-kaminari-views (0.0.5)
+      kaminari (>= 0.13)
+      rails (>= 3.1)
     bootstrap-sass (3.4.1)
       autoprefixer-rails (>= 5.2.1)
       sassc (>= 2.0.0)
@@ -104,6 +107,18 @@ GEM
       ruby-vips (>= 2.0.17, < 3)
     jbuilder (2.11.2)
       activesupport (>= 5.0.0)
+    kaminari (1.2.1)
+      activesupport (>= 4.1.0)
+      kaminari-actionview (= 1.2.1)
+      kaminari-activerecord (= 1.2.1)
+      kaminari-core (= 1.2.1)
+    kaminari-actionview (1.2.1)
+      actionview
+      kaminari-core (= 1.2.1)
+    kaminari-activerecord (1.2.1)
+      activerecord
+      kaminari-core (= 1.2.1)
+    kaminari-core (1.2.1)
     listen (3.4.1)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
@@ -238,12 +253,14 @@ PLATFORMS
 DEPENDENCIES
   bcrypt (~> 3.1.7)
   bootsnap (>= 1.4.4)
+  bootstrap-kaminari-views
   bootstrap-sass
   byebug
   capybara (>= 3.26)
   carrierwave
   coderay (~> 1.1, >= 1.1.1)
   jbuilder (~> 2.7)
+  kaminari
   listen (~> 3.3)
   pg
   puma (~> 5.0)
