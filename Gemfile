@@ -9,7 +9,7 @@ gem 'carrierwave'
 gem 'bootstrap-sass'
 gem 'kaminari'
 gem 'bootstrap-kaminari-views'
-# gem 'social-share-button'
+gem 'social-share-button'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.1.1'
 # Use sqlite3 as the database for Active Record

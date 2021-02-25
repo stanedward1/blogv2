@@ -18,6 +18,10 @@
   <%= image_tag(@blog.picture_url, :width => 300) if @blog.picture.present? %>
 </p>
 
+<p>
+  <%= social_share_button_tag(@blog.title) %>
+</p>
+
 <h2>Comments</h2>
 <% @blog.comments.each do |comment| %>
   <p>
