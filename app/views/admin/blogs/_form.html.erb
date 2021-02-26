@@ -29,4 +29,17 @@
   <div class="actions">
     <%= form.submit %>
   </div>
+<hr>
+  <% @blog.comments.each do |comment| %>
+    <p>
+      <strong>Commenter:</strong>
+      <%= comment.commenter %>
+    </p>
+
+    <p>
+      <strong>Comment:</strong>
+      <%= comment.body %>
+    </p>
+  <% end %>
+
 <% end %>

@@ -10,12 +10,12 @@ default: &default
   timeout: 5000
 
 development:
-  adapter: postgresql
+  adapter: sqlite3
   encoding: unicode
   database: blogv2_development
   pool: 5
-  username: postgres
-  password: blog
+  username:
+  password:
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".

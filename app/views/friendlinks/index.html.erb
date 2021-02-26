@@ -1,4 +1,4 @@
-<%= render "blogs/header" %>
+<%#= render "blogs/header" %>
 
 <p id="notice"><%= notice %></p>
 
@@ -23,8 +23,8 @@
         <td><%= friendlink.name %></td>
         <td><%= friendlink.url %></td>
         <td><%= link_to 'Show', friendlink %></td>
-        <td><%= link_to 'Edit', edit_friendlink_path(friendlink) %></td>
-        <td><%= link_to 'Destroy', friendlink, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+<!--        <td><%#= link_to 'Edit', edit_friendlink_path(friendlink) %></td>-->
+<!--        <td><%#= link_to 'Destroy', friendlink, method: :delete, data: { confirm: 'Are you sure?' } %></td>-->
       </tr>
     <% end %>
   </tbody>
@@ -32,4 +32,4 @@
 
 <br>
 
-<%= link_to 'New Friendlink', new_friendlink_path %>
+<%#= link_to 'New Friendlink', new_friendlink_path %>

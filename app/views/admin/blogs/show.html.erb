@@ -1,4 +1,4 @@
-<%= render "blogs/header" %>
+<%#= render "blogs/header" %>
 
 <p id="notice"><%= notice %></p>
 
@@ -18,5 +18,23 @@
   <%= image_tag(@blog.picture_url, :width => 300) if @blog.picture.present? %>
 </p>
 
-<%= link_to 'Edit', edit_blog_path(@blog) %> |
-<%= link_to 'Back', blogs_path %>
+<p>
+  <%= social_share_button_tag(@blog.title) %>
+</p>
+
+
+<strong>Comments</strong>
+<% @blog.comments.each do |comment| %>
+  <p>
+    <strong>Commenter:</strong>
+    <%= comment.commenter %>
+  </p>
+
+  <p>
+    <strong>Comment:</strong>
+    <%= comment.body %>
+  </p>
+<% end %>
+
+<%= link_to 'Edit Blog', edit_admin_blog_path(@blog) %> |
+<%= link_to 'Back', admin_blogs_path %>

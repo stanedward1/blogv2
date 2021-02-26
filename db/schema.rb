@@ -12,22 +12,18 @@
 
 ActiveRecord::Schema.define(version: 2021_02_20_015411) do
 
-  # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
-
   create_table "blogs", force: :cascade do |t|
     t.string "title"
     t.text "content"
     t.string "picture"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "content_html"
   end
 
   create_table "comments", force: :cascade do |t|
     t.string "commenter"
     t.text "body"
-    t.bigint "blog_id"
+    t.integer "blog_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["blog_id"], name: "index_comments_on_blog_id"
@@ -38,6 +34,14 @@ ActiveRecord::Schema.define(version: 2021_02_20_015411) do
     t.string "picture"
     t.string "name"
     t.string "url"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "tools", force: :cascade do |t|
+    t.string "title"
+    t.string "description"
+    t.string "file"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
